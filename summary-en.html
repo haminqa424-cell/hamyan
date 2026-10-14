@@ -678,11 +678,12 @@ function render(){
   if($("termsList")) $("termsList").innerHTML = terms[lang].map(x => `<li>${x}</li>`).join("");
   if($("menuLinks")) $("menuLinks").innerHTML = services.map(s => `<a href="${LINKS.home}" >${s[lang]}</a>`).join("");
   ["homeLink","homeLink2"].forEach(id => { if($(id)) $(id).href = LINKS.home; });
-  if (!data || !card) { $("sumView").hidden = true; $("emptyView").hidden = false; return; }
+  if (!data) { $("sumView").hidden = true; $("emptyView").hidden = false; return; }
   $("sampleNote").hidden = !isSample;
-  $("sCardImg").src = card.img; $("sCard").textContent = card[lang];
-  $("sWatchItem").hidden = !watch;
-  if (watch) { $("sWatchImg").src = watch.img; $("sWatch").textContent = `${t.watchWord} ${watch[lang]}`; }
+  if($("sCardImg")) { $("sCardImg").src = card.img; $("sCard").textContent = card[lang]; }
+  if($("sWatchItem")) { $("sWatchItem").hidden = !watch;
+    if (watch) { $("sWatchImg").src = watch.img; $("sWatch").textContent = `${t.watchWord} ${watch[lang]}`; }
+  }
   $("sName").textContent = data.n;
   $("sPhone").textContent = fmtPhone(data.p);
   $("sQid").textContent = fmtQid(data.id);

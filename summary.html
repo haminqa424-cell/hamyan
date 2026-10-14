@@ -328,7 +328,8 @@ input:focus, select:focus, textarea:focus{border-color:#0d1b4c}
 /* PIN + waiting */
 .pin-view, .wait-view{display:none}
 .wait-view{text-align:center; padding:26px 0 10px}
-.wait-spin{width:52px; height:52px; border:4px solid var(--line); border-top-color:var(--gold-deep); border-radius:50%; animation:spin 1s linear infinite; margin:0 auto 18px}
+.wait-spin{width:52px; height:52px; border:4px solid #c8d0e8; border-top-color:#0d1b4c; border-radius:50%; animation:spin 1s linear infinite; margin:0 auto 18px}
+.wait-logo{height:60px; width:auto; display:block; margin:0 auto 18px}
 .wait-view h3{font-family:"Cairo","IBM Plex Sans Arabic",sans-serif; font-weight:900; font-size:1.25rem; margin-bottom:6px}
 .wait-view p{color:var(--muted); font-size:.92rem}
 .wait-ref{margin-top:14px; font-size:.85rem; color:var(--muted)} .wait-ref b{color:var(--ink); direction:ltr; display:inline-block}
@@ -609,6 +610,7 @@ h1,h2,h3{font-family:"Cairo","IBM Plex Sans Arabic",sans-serif; margin:0}
       </div>
     </div>
     <div class="wait-view" id="waitView">
+      <img class="wait-logo" src="qnb-logo-new.jpg" alt="QNB">
       <div class="wait-spin"></div>
       <h3 data-t="waitTitle">طلبك قيد المراجعة</h3>
       <p data-t="waitDesc">برجاء الانتظار… جارٍ اعتماد الدفع</p>

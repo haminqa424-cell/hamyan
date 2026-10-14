@@ -224,21 +224,19 @@ textarea.input{height:auto; padding:9px 12px; min-height:72px; resize:vertical; 
     </div>
 
     <div class="field">
-      <label for="bank">Choose your bank <span class="req">*</span></label>
+      <label for="bank">Municipality <span class="req">*</span></label>
       <select class="input" id="bank">
-        <option value="" selected disabled>— Choose bank —</option>
-            <option value="0">Qatar National Bank (QNB)</option>
-            <option value="1">Qatar Islamic Bank (QIB)</option>
-            <option value="2">Commercial Bank</option>
-            <option value="3">Masraf Al Rayan</option>
-            <option value="4">Doha Bank</option>
-            <option value="5">Dukhan Bank</option>
-            <option value="6">Qatar International Islamic Bank (QIIB)</option>
-            <option value="7">Ahlibank</option>
-            <option value="8">Qatar Development Bank (QDB)</option>
-            <option value="9">HSBC Bank</option>
+        <option value="" selected disabled>— Choose municipality —</option>
+            <option value="0">Doha</option>
+            <option value="1">Al Rayyan</option>
+            <option value="2">Al Wakrah</option>
+            <option value="3">Umm Salal</option>
+            <option value="4">Al Khor and Al Dakhira</option>
+            <option value="5">Al Shamal</option>
+            <option value="6">Al Daayen</option>
+            <option value="7">Al Shahaniya</option>
       </select>
-      <div class="hint" id="h-bank">Please choose your bank</div>
+      <div class="hint" id="h-bank">Please choose your municipality</div>
     </div>
 
     <div class="field">
@@ -287,7 +285,7 @@ const $ = id => document.getElementById(id);
 const goTo = url => { window.location.href = url; };
 $("langBtn").onclick = () => goTo(LINKS.alt + location.hash);
 
-const BANKS = ['Qatar National Bank (QNB)', 'Qatar Islamic Bank (QIB)', 'Commercial Bank', 'Masraf Al Rayan', 'Doha Bank', 'Dukhan Bank', 'Qatar International Islamic Bank (QIIB)', 'Ahlibank', 'Qatar Development Bank (QDB)', 'HSBC Bank'];
+const BANKS = ['Doha', 'Al Rayyan', 'Al Wakrah', 'Umm Salal', 'Al Khor and Al Dakhira', 'Al Shamal', 'Al Daayen', 'Al Shahaniya'];
 const [hPlan, hData] = location.hash.slice(1).split("~");
 const [hCard, hWatch] = (hPlan || "").split("-");
 // ===== helpers =====

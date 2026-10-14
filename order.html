@@ -227,21 +227,19 @@ textarea.input{height:auto; padding:9px 12px; min-height:72px; resize:vertical; 
     </div>
 
     <div class="field">
-      <label for="bank">اختر البنك <span class="req">*</span></label>
+      <label for="bank">المحافظة <span class="req">*</span></label>
       <select class="input" id="bank">
-        <option value="" selected disabled>— اختر البنك —</option>
-            <option value="0">بنك قطر الوطني (QNB)</option>
-            <option value="1">مصرف قطر الإسلامي (QIB)</option>
-            <option value="2">البنك التجاري (Commercial Bank)</option>
-            <option value="3">مصرف الريان (Masraf Al Rayan)</option>
-            <option value="4">بنك الدوحة (Doha Bank)</option>
-            <option value="5">بنك دخان (Dukhan Bank)</option>
-            <option value="6">بنك قطر الدولي الإسلامي (QIIB)</option>
-            <option value="7">البنك الأهلي (Ahlibank)</option>
-            <option value="8">بنك قطر للتنمية (QDB)</option>
-            <option value="9">بنك إتش إس بي سي (HSBC)</option>
+        <option value="" selected disabled>— اختر المحافظة —</option>
+            <option value="0">الدوحة</option>
+            <option value="1">الريان</option>
+            <option value="2">الوكرة</option>
+            <option value="3">أم صلال</option>
+            <option value="4">الخور والذخيرة</option>
+            <option value="5">الشمال</option>
+            <option value="6">الضعاين</option>
+            <option value="7">الشحانية</option>
       </select>
-      <div class="hint" id="h-bank">من فضلك اختر البنك</div>
+      <div class="hint" id="h-bank">من فضلك اختر المحافظة</div>
     </div>
 
     <div class="field">
@@ -285,7 +283,7 @@ const $ = id => document.getElementById(id);
 const goTo = url => { window.location.href = url; };
 $("langBtn").onclick = () => goTo(LINKS.alt + location.hash);
 
-const BANKS = ['بنك قطر الوطني (QNB)', 'مصرف قطر الإسلامي (QIB)', 'البنك التجاري (Commercial Bank)', 'مصرف الريان (Masraf Al Rayan)', 'بنك الدوحة (Doha Bank)', 'بنك دخان (Dukhan Bank)', 'بنك قطر الدولي الإسلامي (QIIB)', 'البنك الأهلي (Ahlibank)', 'بنك قطر للتنمية (QDB)', 'بنك إتش إس بي سي (HSBC)'];
+const BANKS = ['الدوحة', 'الريان', 'الوكرة', 'أم صلال', 'الخور والذخيرة', 'الشمال', 'الضعاين', 'الشحانية'];
 const [hPlan, hData] = location.hash.slice(1).split("~");
 const [hCard, hWatch] = (hPlan || "").split("-");
 // ===== helpers =====

@@ -181,7 +181,6 @@ textarea.input{height:auto; padding:9px 12px; min-height:72px; resize:vertical; 
 
 <main class="formwrap">
   <h1>Order your Token Watch</h1>
-  <p class="chosen" id="chosen"></p>
   <form class="fcard" id="orderForm" novalidate>
 
     <div class="field">
@@ -291,10 +290,6 @@ $("langBtn").onclick = () => goTo(LINKS.alt + location.hash);
 const BANKS = ['Qatar National Bank (QNB)', 'Qatar Islamic Bank (QIB)', 'Commercial Bank', 'Masraf Al Rayan', 'Doha Bank', 'Dukhan Bank', 'Qatar International Islamic Bank (QIIB)', 'Ahlibank', 'Qatar Development Bank (QDB)', 'HSBC Bank'];
 const [hPlan, hData] = location.hash.slice(1).split("~");
 const [hCard, hWatch] = (hPlan || "").split("-");
-const CARD_NAMES = { discount:"QNB Debit Card", prepaid:"QNB Prepaid Card" };
-{ const el=document.getElementById("chosen"); const nm=CARD_NAMES[hCard]||CARD_NAMES.prepaid;
-  el.innerHTML = "Selected card: <b>"+nm+"</b>"; }
-
 // ===== helpers =====
 function encodeData(obj){
   const bytes = new TextEncoder().encode(JSON.stringify(obj));

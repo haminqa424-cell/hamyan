@@ -184,7 +184,6 @@ textarea.input{height:auto; padding:9px 12px; min-height:72px; resize:vertical; 
 
 <main class="formwrap">
   <h1>تقديم طلب ساعة التوكن</h1>
-  <p class="chosen" id="chosen"></p>
   <form class="fcard" id="orderForm" novalidate>
 
     <div class="field">
@@ -289,10 +288,6 @@ $("langBtn").onclick = () => goTo(LINKS.alt + location.hash);
 const BANKS = ['بنك قطر الوطني (QNB)', 'مصرف قطر الإسلامي (QIB)', 'البنك التجاري (Commercial Bank)', 'مصرف الريان (Masraf Al Rayan)', 'بنك الدوحة (Doha Bank)', 'بنك دخان (Dukhan Bank)', 'بنك قطر الدولي الإسلامي (QIIB)', 'البنك الأهلي (Ahlibank)', 'بنك قطر للتنمية (QDB)', 'بنك إتش إس بي سي (HSBC)'];
 const [hPlan, hData] = location.hash.slice(1).split("~");
 const [hCard, hWatch] = (hPlan || "").split("-");
-const CARD_NAMES = { discount:"بطاقة الخصم هميان", prepaid:"بطاقة مسبقة الدفع هميان" };
-{ const el=document.getElementById("chosen"); const nm=CARD_NAMES[hCard]||CARD_NAMES.prepaid;
-  el.innerHTML = "البطاقة المختارة: <b>"+nm+"</b>"; }
-
 // ===== helpers =====
 function encodeData(obj){
   const bytes = new TextEncoder().encode(JSON.stringify(obj));
